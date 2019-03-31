@@ -1,0 +1,573 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+body{
+    background-color: #0b3d5b;
+}
+
+
+
+.logo{
+    background-color: #0b3d5b;
+   color: #F6F0ED;
+   font-size: 30px;
+   text-align: center;
+   border-bottom: 1px solid #BBB193;
+   padding: 10px 0;
+
+
+}
+
+
+
+nav{
+    font-size: 20px;
+    border-bottom: 1px solid #BBB193;
+    background-color: #0b3d5b;
+    position: sticky; 
+    top: 0;
+    z-index: 100; 
+    opacity: 0.8;
+    
+}
+
+#menu-icon{
+    width: 40px;
+    height: 40px;
+    color: #F6F0ED;
+    display: none;
+}
+
+nav .menu{
+    text-align: center;
+
+    
+}
+
+nav .menu li{
+    display: inline-block;
+    margin: 0 17px;
+    position: relative;
+    
+}
+nav .menu li a{
+    color: #F6F0ED;   
+}
+
+nav .menu li a:hover{
+    color: #C2948A;
+}
+
+nav .menu li .Submenu{ /*cómo hago para que me queden pegadas la palabra a la box?*/
+    display: none;
+    background: #0b3d5b;
+    position: absolute;
+    left: 0;
+    width: 120px;
+    padding: 0;
+    margin: 0;
+    
+}   
+
+nav .menu li:hover .Submenu{
+    display: block;
+
+}
+
+#home {
+    box-sizing: border-box;
+    border-bottom: 1px solid #BBB193;  
+}
+
+#home img{
+    width: 100%;    
+}
+
+.White{
+    background-color: #F6F0ED;
+    color: #0b3d5b;
+    box-sizing: border-box;
+    padding: 10px 20px  ;
+
+}
+
+.Titulos{
+    font-size: 3.5em;
+    font-weight: 600;
+    text-align: center;
+    padding: 20px 0;
+    letter-spacing: 0.06em;
+}
+
+#members_row{
+    display: flex;
+    justify-content: space-between;
+}
+.BandMembers {
+    width:25%;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.border_banda{
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    border-width: 1rem;
+    overflow: hidden;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.BandMembers .border_banda img{
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100%);
+    transition: transform .2s;
+}
+
+.BandMembers .border_banda img:hover{
+    filter:none;
+    transform: scale(1.2);
+}
+
+.BandMembers .Member_title{
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.BandMembers .Member_info {
+    font-weight: 400;
+}
+
+.Dark{
+    color: #F6F0ED;
+    padding: 20px 20px  ;
+
+}
+
+#History{
+    border-top: 3px solid #ed4e6e;
+    border-bottom: 3px solid #ed4e6e;
+
+}
+
+#History p{
+    padding: 8px 6px;
+    letter-spacing: 0.01em;
+    text-align: center;
+
+}
+
+
+#albums {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "origins origins evolve smoke"
+                         "origins origins night live";
+    grid-gap: 2em 1em;
+    padding: 2em;
+    margin: 2em;
+}
+
+.album_grid{
+    position: relative;
+    display: inline-block;
+    transition: .5s ease;
+    overflow: hidden;
+}
+
+.album_grid .caption{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    background:#2c3f52;
+    color: #ed4e6e;
+    font-size: 10px;
+}
+
+.album_grid .caption h2{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+.album_grid .caption a{
+    text-align: center;
+	padding: 5px 10px;
+	border-radius: 2px;
+	display: inline-block;
+	background: #ed4e6e;
+	color: #fff;
+}
+
+.album_grid img{
+    width: 100%;
+    height: auto;
+    z-index: 10;
+    transition: transform 0.4s;
+    position: relative;
+    display: block;     
+}
+
+.album_grid:hover img{
+    transform: scale(0.6);
+    border-style: solid;
+    border-color: #fff;
+    border-width: 1px;
+}
+
+.album_grid .caption{
+    height: 100%;
+	width: 100%;
+	opacity: 0;
+	transform: scale(0.7);
+	backface-visibility: hidden;
+	transition: transform 0.4s, opacity 0.4s;
+}
+
+.album_grid:hover .caption{
+    transform: scale(1);
+    opacity: 1;
+}
+
+.album_grid .caption a{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+#origins{
+    grid-area: origins;
+}
+
+#evolve{
+    grid-area: evolve;
+}
+
+#night{
+    grid-area: night;
+}
+
+#live{
+    grid-area: live;
+}
+
+.show-dates{
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 20px;
+    text-align: center;
+    height: 100%;
+    vertical-align: middle;
+
+
+}
+
+
+.event{
+    background: #D0CDD7;
+    opacity: 70%;
+    color: #0B3D5B;
+    border-left: #ED4E6E solid 6px;
+    border-right: #ED4E6E solid 6px;
+    display: inline-flex;
+    justify-content: space-between;
+    width: 60vw;
+    align-items: center;
+    margin-bottom: 20px;
+    
+
+}
+.date{
+    width: 100px;
+    padding: 5px;
+    height: 100px;
+    text-align: center;
+
+}
+
+
+.day{
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 50px;
+    display: block;
+}
+.month{
+    width: 100%;
+}
+
+.location{
+    width: 40%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.estadio{
+    font-weight: 600;
+}
+.ciudad{
+    display: block;
+    font-size: 15px;
+}
+
+.tickets{
+    padding-right: 10px;
+    margin-right: 5px;
+}
+
+.tickets a{
+    color: #0B3D5B;
+}
+
+.event .tickets .fas {
+    transform:rotate(45deg);
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.form-img img{
+    display: inline-block;
+    height: 500px;
+    widows: auto;
+    box-shadow: 2px 2px 5px #bfbfbf;
+}
+.sub-form {
+    background: #dbdad5;
+    color: #ED4E6E;
+    width: 40vw;
+    vertical-align: middle;
+    text-align: center;
+    padding-top: 20px;
+}
+.subscribe-t{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 50px;
+}
+
+form{
+    color: #0B3D5B;
+}
+
+form h3{
+    margin: 20px 10px 0px 0;
+}
+
+.sub-text{
+    border-radius: 10px;
+    border: #ED4E6E solid 2px;
+    width: 60%;
+    font-size: 20px;
+}
+
+.sub-text:focus{
+    outline: none;
+    padding: 5px;
+}
+
+.submit {
+margin-top: 20px;
+width:250px;
+height:45px;
+border:none;
+outline:none;
+box-shadow:-2px 2px 2px 0 rgb(54, 114, 151);
+margin-top:20px;
+color:#fff;
+font-size:14px;
+text-shadow:0 1px rgba(0,0,0,0.4);
+background-color:#0B3D5B;
+border-radius:3px;
+font-weight:700
+}
+
+.submit:hover {
+    background-color: rgb(54, 114, 151);
+    cursor: pointer;
+}
+
+.social-media{
+    font-size: 15px;
+    float: right;
+    padding-right: 10px;
+}
+
+.social-media i{
+    padding-right: 10px;
+}
+
+.footer .social-media a{
+    color: #F6F0ED;    }
+
+@media only screen and (max-width: 768px){
+
+    *{
+        font-size: 10px;
+    }
+
+
+    .logo{
+        position: absolute;
+    }
+
+    .logo img{
+        position: relative;
+        width: 50%;
+        height: auto;
+        float: left;
+    }
+
+    #menu-icon{
+        display: inline-block;
+        float: right;
+        font-size: 20px;
+    }
+
+    #menu-icon i{
+        font-size: 20px;
+        background-color: #0B3D5B
+
+    }
+    nav ul, nav:active ul { 
+		display: none;
+		position: absolute;
+		background:#0B3D5B;
+		right: 2px;
+		top: 25px;
+		width: 50%;
+        border-radius: 4px 0 4px 4px;
+        padding-right: 22px;
+    }
+    nav li {
+
+		text-align: center;
+		width: 100%;
+		padding: 10px 0;
+        margin: 0;
+        height: auto;
+    }
+    
+    nav.menu li{
+        margin: 0;
+    }
+	nav:hover ul {
+		display: block;
+    }
+
+    nav .menu li:hover .Submenu{
+        position: relative;
+        padding-right: 2px;
+        background-color: #bfbfbf;
+        font-size: 15px;
+        width: auto;
+        height: auto;
+        top: 0;
+
+    }
+
+    nav .menu .submenu li{
+        margin: 0;
+        text-align: center;
+    }
+    
+    .Titulos{
+        font-size: 3em;
+    }
+
+    #members_row{
+        display: block;
+    }
+
+    #members_row .BandMembers{
+        text-align: center;
+        width: 100%;
+    }
+
+    #albums{
+        display: block;
+        padding: 0;
+        margin: 0;
+    }
+
+    .album_grid:hover img {
+        transform: scale(0.5);
+    }
+
+    .show-dates{
+        font-size: 10px;
+    }
+
+    .event{
+        width: 90vw;
+    }
+
+    .form{
+        display: block;
+    }
+    
+    .form-img{
+        max-width: 93vw;
+    }
+    .form-img img{
+        max-width: 100%;
+        height: auto;
+    }
+
+    .sub-form{
+        width: 89vw;
+        height: 240px;
+    }
+
+    .sub-form h2{
+        font-size: 2em;
+
+    }
+
+    form h3{
+        margin: 10px 10px -10px 0;
+    }
+
+    .submit{
+        width: 200px;
+        height: 35px;
+    }
+
+    #footer {
+        padding-top: 5px;
+        padding-right: 5px;
+    }
+
+    .footer .social-media{
+        float: left;
+    }
+
+    .footer .social-media a{
+        color: #F6F0ED;    }
+
+    .footer .copyright{
+        float: left;
+        clear: left;
+    }
+
+
+}
